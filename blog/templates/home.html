@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="ui card">
+        {% for tweet in tweets %}
+            <div class="content">
+                <div class="header">{{ tweet.author }}</div>
+                <div class="meta">{{ tweet.created_date }}</div>
+                <div class="description">
+                    {{ tweet.text }}
+                </div>
+            </div>
+            <div class="extra content">
+                <i class="check icon"></i>
+                    {{ tweet.likes }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
